@@ -62,8 +62,9 @@ class WebAuthViewController: UIViewController, UIWebViewDelegate{
                                 self.defaults.set(true, forKey: kAuth)
                                 self.defaults.synchronize()
                                 
+                                self.hideProgress()
                                 // TODO: Place code on successful authentication
-                                self.showAlertAlertView("", "Authentication Successfully")
+                                self.showAlertAlertView("", "You are already logged in")
                             }
                         }else{
                             clearCodentials()
@@ -137,6 +138,7 @@ class WebAuthViewController: UIViewController, UIWebViewDelegate{
                 self.defaults.set(self.username, forKey: kUsername)
                 self.defaults.synchronize()
                 
+                self.hideProgress()
                 // TODO: Place code on successful authentication
                 self.showAlertAlertView("", "Authentication Successfully")
             }

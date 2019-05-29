@@ -59,9 +59,9 @@ let healthSourceColorArray:[UIColor]=[UIColor(red: 52/255.0, green: 52/255.0, bl
 
 
 #if DEBUG
-let BASE_URL = "http://10.10.10.162:8084/"  // Place resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL here
+let BASE_URL = "http://shim-host:8084/"  // Place resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL here with port 8084
 #else
-let BASE_URL = "http://10.10.10.162:8084/"  // Place resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL here
+let BASE_URL = "http://shim-host:8084/"  // Place resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL here with port 8084
 #endif
 
 

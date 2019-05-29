@@ -10,16 +10,16 @@ An **Open m Health Shimmer IOS App**
 2. Use openmhealth-shimmer guideline, install Docker
    Follow installation option 2(Recommended), build and run the code in Docker, in a terminal run command
    ./run-dockerized.sh -d  
-   visist http://<shimmer-host>:8083
-3. Copy http://<shimmer-host>:8083 and paste in resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL field.
+   visit http://shimmer-host:8083
+3. Copy http://shimmer-host:8083 and paste in resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL field.
 4. Configure resource-server.env. Register application on FITBIT and  MISFIT developer site
-5. resource-server.env REDIRECT_BASE_URL use in application registation.
+5. resource-server.env REDIRECT_BASE_URL use in application registration.
 6. For MISFIT visit 
 	https://build.misfit.com/signup
    For FITBIT visit(opennhealth-shimmer clone must be deployed on Amazon EC2 like web services) 
     https://dev.fitbit.com/login
 7. Copy registered application Client_ID(required), Client_secret(required) and copy other if present, paste into resource-server.env
-8. After registeration confirmation re-run docker using 
+8. After registration confirmation re-run docker using 
    ./run-dockerized.sh -d
 
 9. Open `Shimmer-POC.xcworkspace`, Assign REDIRECT_BASE_URL to BASE_URL in AppConstant.swift
@@ -43,10 +43,10 @@ DispatchQueue.main.async{
   print("user already Authorized")                    
   ...                
   // TODO: Place code on successful authentication
-  self.showAlertAlertView("", "Authentication Successfully")
+  self.showAlertAlertView("", "Your are already logged in")
 }
 ```
-Line : 133
+Line : 134
 ```
 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
   ...
