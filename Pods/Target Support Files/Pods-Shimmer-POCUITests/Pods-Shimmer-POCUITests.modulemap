@@ -1,0 +1,6 @@
+framework module Pods_Shimmer_POCUITests {
+  umbrella header "Pods-Shimmer-POCUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
