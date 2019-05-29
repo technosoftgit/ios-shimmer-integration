@@ -39,31 +39,30 @@ portal select health data source on main screen.
 If you want to add custom task after successful authentication add code in **WebAuthViewController.swift** TODO
 Line : 55
 ```
-	DispatchQueue.main.async{
-        print("user already Authorized")                    
-        ...                
-        // TODO: Place code on successful authentication
-        self.showAlertAlertView("", "Authentication Successfully")
-	}
+DispatchQueue.main.async{
+  print("user already Authorized")                    
+  ...                
+  // TODO: Place code on successful authentication
+  self.showAlertAlertView("", "Authentication Successfully")
+}
 ```
 Line : 133
 ```
-	DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-        ...
-        // TODO: Place code on successful authentication
-        self.showAlertAlertView("", "Authentication Successfully")
-    }
+DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+  ...
+  // TODO: Place code on successful authentication
+  self.showAlertAlertView("", "Authentication Successfully")
+}
 ```
 Line : 176
 ```
-	func showAlertAlertView(_ aTitle: String, _ aMessage: String)
-    {
-        ...
-        let actionOk = UIAlertAction(title: "OK", style: .cancel) { (action: UIAlertAction!) in
-            // TODO: Place code on successful authentication
-        }
-        ...
-    }
+func showAlertAlertView(_ aTitle: String, _ aMessage: String) {
+  ...
+  let actionOk = UIAlertAction(title: "OK", style: .cancel) { (action: UIAlertAction!) in
+    // TODO: Place code on successful authentication
+  }
+  ...
+}
 ```
 
 ### Credits
