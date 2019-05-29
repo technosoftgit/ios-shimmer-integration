@@ -7,13 +7,13 @@ An **Open m Health Shimmer IOS App**
 ## Installation and Configuration
 
 1. Clone openmhealth-shimmer code from `https://github.com/openmhealth/shimmer`.
-2. Use openmhealth-shimmer guideline, install Docker
-   Follow installation option 2(Recommended), build and run the code in Docker, in a terminal run command
+2. Follow openmhealth-shimmer guideline, install Docker
+   Follow installation option 2(Recommended), build and run the code in Docker, using command
    ./run-dockerized.sh -d  
-   visit http://shimmer-host:8083
+   visit http://shimmer-host:8083, shimmer-host vary system to system
 3. Copy http://shimmer-host:8083 and paste in resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL field.
-4. Configure resource-server.env. Register application on FITBIT and  MISFIT developer site
-5. resource-server.env REDIRECT_BASE_URL use in application registration.
+4. Register application on FITBIT and  MISFIT developer site
+5. resource-server.env PROVIDER_REDIRECT_BASE_URL use in application registration.
 6. For MISFIT visit 
 	https://build.misfit.com/signup
    For FITBIT visit(opennhealth-shimmer clone must be deployed on Amazon EC2 like web services) 
@@ -22,21 +22,21 @@ An **Open m Health Shimmer IOS App**
 8. After registration confirmation re-run docker using 
    ./run-dockerized.sh -d
 
-9. Open `Shimmer-POC.xcworkspace`, Assign REDIRECT_BASE_URL to BASE_URL in AppConstant.swift
-10.Install POD using `pod install` command in project directory
-11. Open the project file `Shimmer-POC.xcworkspace` in Xcode 8+.
-12. Place resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL in AppConstant.swift 
-12. Select an iPhone simulator and press **Run**.
+9. Open `Shimmer-POC.xcworkspace`, 
+10. Place resource-server.env OPENMHEALTH_SHIMMER_DATA_PROVIDER_REDIRECT_BASE_URL in AppConstant.swift, close project.
+11. Install PODS using `pod install` command in project directory
+12. Open the project file `Shimmer-POC.xcworkspace` in Xcode 8+. 
+13. Select an iPhone simulator and press **Run**.
 
 
 ## What's Happening?
 
-This app allows you to connect with **MISFIT and FITBIT** via shimmer. After configure FITBIT or MISFIT on develop 
-portal select health data source on main screen.
+This app allows you to connect with **MISFIT and FITBIT** devices via shimmer. After configure FITBIT or MISFIT on develop 
+portal, select health data source on mobile main screen.
 
 ## Add Custom Code 
 
-If you want to add custom task after successful authentication add code in **WebAuthViewController.swift** TODO
+If you want to add custom task after successful authentication add code in **WebAuthViewController.swift** TODOS
 Line : 55
 ```
 DispatchQueue.main.async{
