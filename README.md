@@ -55,6 +55,7 @@ Line : 133
     }
 ```
 Line : 176
+```
 	func showAlertAlertView(_ aTitle: String, _ aMessage: String)
     {
         ...
@@ -63,6 +64,7 @@ Line : 176
         }
         ...
     }
+```
 
 ### Credits
   The code based on below libraries
