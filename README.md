@@ -66,7 +66,7 @@ func showAlertAlertView(_ aTitle: String, _ aMessage: String) {
 ```
 
 ### Credits
-  The code based on below libraries
+  This code is based on below libraries:
 
   - Open M Health 
     * Open M Health Shimmer
